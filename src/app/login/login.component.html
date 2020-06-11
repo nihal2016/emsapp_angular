@@ -1,1 +1,29 @@
-<p>login works!</p>
+[5:43 PM] Sagar Purushottam Deshmukh
+    
+
+<h2>Login</h2>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<divclass="form-group">
+<labelfor="userloginid">UserLoginId</label>
+<inputtype="text"formControlName="userloginid"class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userloginid.errors }" />
+<div *ngIf="submitted && f.userloginid.errors"class="invalid-feedback">
+<div *ngIf="f.userloginid.errors.required">UserLoginId is required</div>
+</div>
+</div>
+<divclass="form-group">
+<labelfor="userpassword">Password</label>
+<inputtype="password"formControlName="userpassword"class="form-control" [ngClass]="{ 'is-invalid': submitted && f.userpassword.errors }" />
+<div *ngIf="submitted && f.userpassword.errors"class="invalid-feedback">
+<div *ngIf="f.userpassword.errors.required">Password is required</div>
+</div>
+</div>
+<divclass="form-group">
+<button [disabled]="loading"class="btn btn-primary">
+<span *ngIf="loading"class="spinner-border spinner-border-sm mr-1"></span>
+ Login
+</button>
+<arouterLink="/register"class="btn btn-link">Register</a>
+</div>
+</form>
+
+<https://teams.microsoft.com/l/message/19:569cd426cf784f0c99c1786225482600@thread.tacv2/1591877585934?tenantId=2161a74d-1c3e-4d34-a8c8-131360d2e92c&amp;groupId=c238563c-0988-42a9-800d-60bb6193abab&amp;parentMessageId=1591871292852&amp;teamName=Angular Training 11-Jun&amp;channelName=General&amp;createdTime=1591877585934>
